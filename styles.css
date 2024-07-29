@@ -45,6 +45,7 @@ section {
     background-color: white;
     margin: 1em;
     border-radius: 8px;
+    text-align: center; /* Center align section content */
 }
 
 section h2 {
