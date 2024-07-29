@@ -9,10 +9,16 @@ header {
     color: white;
     padding: 1em;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the header is on top of other content */
 }
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 nav ul li {
     display: inline;
@@ -31,7 +37,7 @@ nav ul li a.active, nav ul li a:hover {
 section {
     padding: 2em;
     background-color: white;
-    margin: 1em;
+    margin: 6em 1em 1em 1em; /* Add top margin to prevent content from hiding under fixed header */
     border-radius: 8px;
 }
 footer {
