@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+
 header {
     background-color: #333;
     color: white;
@@ -13,41 +14,52 @@ header {
     top: 0;
     z-index: 1000;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center; /* Align the items vertically */
 }
+
 nav ul li {
     display: inline;
     margin-right: 10px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
 }
+
 nav ul li a.active {
     background-color: gold;
     padding: 5px;
     border-radius: 5px;
     color: black;
 }
+
 section {
     padding: 2em;
     background-color: white;
     margin: 1em;
     border-radius: 8px;
 }
+
 footer {
     text-align: center;
     padding: 1em;
     background-color: #333;
     color: white;
 }
+
 .team-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .team-member {
     background-color: #e0e0e0;
     border-radius: 8px;
@@ -56,14 +68,17 @@ footer {
     margin: 10px;
     width: 200px;
 }
+
 .team-member img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
 }
+
 .team-member h3 {
     margin: 10px 0 5px 0;
 }
+
 .team-member a {
     text-decoration: none;
     color: #0073b1;
