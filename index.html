@@ -11,7 +11,7 @@
         <h1>Urbanization & Housing Market Trends</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#analysis">Analysis</a></li>
                 <li><a href="#recommendations">Recommendations</a></li>
                 <li><a href="#about">About</a></li>
@@ -101,7 +101,7 @@
     <section id="team">
         <h2>Our Team</h2>
         <p>Zeynep Dereli</p>
-        <p>Negin Djalali</p>
+        <p>Negin Jalali</p>
         <p>Soroush Yazdani</p>
         <p>Jeremy Ramirez</p>
     </section>
@@ -109,5 +109,28 @@
         <p>&copy; 2024 Urbanization & Housing Market Trends</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+            
+            window.addEventListener('scroll', function () {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 60) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
