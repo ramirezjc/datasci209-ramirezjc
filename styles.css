@@ -9,16 +9,10 @@ header {
     color: white;
     padding: 1em;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Ensure the header is on top of other content */
 }
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 nav ul li {
     display: inline;
@@ -37,7 +31,7 @@ nav ul li a.active, nav ul li a:hover {
 section {
     padding: 2em;
     background-color: white;
-    margin: 6em 1em 1em 1em; /* Add top margin to prevent content from hiding under fixed header */
+    margin: 1em;
     border-radius: 8px;
 }
 footer {
@@ -45,27 +39,4 @@ footer {
     padding: 1em;
     background-color: #333;
     color: white;
-}
-.team-member {
-    display: inline-block;
-    text-align: center;
-    margin: 1em;
-    padding: 1em;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.team-member img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-.team-member h3 {
-    margin: 0.5em 0;
-}
-.team-member a {
-    color: #0073b1; /* LinkedIn color */
-    text-decoration: none;
-    font-weight: bold;
 }
