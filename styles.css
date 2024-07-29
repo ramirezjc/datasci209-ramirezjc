@@ -46,3 +46,26 @@ footer {
     background-color: #333;
     color: white;
 }
+.team-member {
+    display: inline-block;
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.team-member h3 {
+    margin: 0.5em 0;
+}
+.team-member a {
+    color: #0073b1; /* LinkedIn color */
+    text-decoration: none;
+    font-weight: bold;
+}
