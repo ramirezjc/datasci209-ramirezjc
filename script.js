@@ -7,10 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 70;
+            console.log(`Section: ${section.id}, sectionTop: ${sectionTop}, pageYOffset: ${window.pageYOffset}`);
             if (pageYOffset >= sectionTop) {
                 current = section.getAttribute('id');
             }
         });
+
+        console.log(`Current section: ${current}`);
 
         navLinks.forEach(link => {
             link.classList.remove('active');
