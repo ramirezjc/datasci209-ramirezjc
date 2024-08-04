@@ -101,4 +101,8 @@ footer {
     width: 30px;
     height: 30px;
     margin-top: 1em;
+    object-fit: cover;
+    clip-path: none;
+    border: none; /* Remove border from LinkedIn icon */
+    box-shadow: none; /* Remove shadow from LinkedIn icon */
 }
