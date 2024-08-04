@@ -45,12 +45,14 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Remove this block
 nav ul li a.active {
     background-color: gold;
     padding: 5px;
     border-radius: 5px;
     color: black;
 }
+*/
 
 section {
     padding: 2em;
