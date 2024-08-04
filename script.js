@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateActiveLink() {
         let current = '';
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
