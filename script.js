@@ -1,31 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-    function setActiveMenu() {
-        var scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
-        var links = document.querySelectorAll('nav ul li a');
-        var lastLink = links[links.length - 1];
-        var contactSection = document.querySelector(lastLink.getAttribute('href'));
-        
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-            links.forEach(function (link) {
-                link.classList.remove('active');
-            });
-            lastLink.classList.add('active');
-            return;
-        }
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li a');
 
-        links.forEach(function (link) {
-            var section = document.querySelector(link.getAttribute('href'));
-            if (section.offsetTop <= scrollPos && (section.offsetTop + section.offsetHeight) > scrollPos) {
-                links.forEach(function (link) {
-                    link.classList.remove('active');
-                });
+    window.addEventListener('scroll', function () {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 60) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
                 link.classList.add('active');
             }
         });
-    }
-
-    window.addEventListener('scroll', setActiveMenu);
-
-    // Initial trigger to set the active class based on the current scroll position
-    setActiveMenu();
+    });
 });
