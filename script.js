@@ -2,18 +2,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
 
-    window.addEventListener('scroll', function () {
+    function updateActiveLink() {
         let current = '';
-
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 70;
-            console.log(`Section: ${section.id}, sectionTop: ${sectionTop}, pageYOffset: ${window.pageYOffset}`);
-            if (pageYOffset >= sectionTop) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= sectionTop - 70 && window.pageYOffset < sectionTop + sectionHeight - 70) {
                 current = section.getAttribute('id');
             }
         });
-
-        console.log(`Current section: ${current}`);
 
         navLinks.forEach(link => {
             link.classList.remove('active');
@@ -21,5 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 link.classList.add('active');
             }
         });
-    });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink();  // Initialize active link on page load
 });
