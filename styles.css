@@ -45,6 +45,15 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Add these lines */
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
 /* Remove this block
 nav ul li a.active {
     background-color: gold;
@@ -215,7 +224,7 @@ footer {
     transition: background-color 0.3s;
 }
 
-.contact-container button:hover {
+contact-container button:hover {
     background-color: darkgoldenrod;
 }
 
