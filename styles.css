@@ -25,8 +25,8 @@ nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center the navigation items */
-    align-items: center; /* Align the items vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
@@ -54,7 +54,7 @@ section {
 }
 
 section h2 {
-    text-align: center; /* Center align section headings */
+    text-align: center;
 }
 
 footer {
@@ -89,8 +89,8 @@ footer {
     width: 150px;
     height: 150px;
     margin-bottom: 1em;
-    border: 5px solid #ddd; /* Add a rim */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    border: 5px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .team-member h3 {
@@ -108,8 +108,8 @@ footer {
     height: 30px;
     margin-top: 1em;
     object-fit: cover;
-    border: none; /* Remove border from LinkedIn icon */
-    box-shadow: none; /* Remove shadow from LinkedIn icon */
+    border: none;
+    box-shadow: none;
 }
 
 .team-subtitle {
@@ -119,13 +119,12 @@ footer {
     margin-bottom: 1em;
 }
 
-/* Home Video Section */
 #home {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    padding-top: 80px; /* Increase padding to avoid header overlap */
+    padding-top: 80px;
 }
 
 #homeVideo {
@@ -153,7 +152,6 @@ footer {
     padding: 1em;
 }
 
-/* Contact Us Section */
 #contact {
     background-color: #333;
     color: white;
@@ -201,4 +199,13 @@ footer {
 
 .contact-container button:hover {
     background-color: darkgoldenrod;
+}
+
+.visualization {
+    text-align: center;
+}
+
+#analysis .visualization {
+    max-width: 1000px;
+    margin: 0 auto;
 }
