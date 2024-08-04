@@ -78,7 +78,7 @@ footer {
     transform: scale(1.05);
 }
 
-.team-member img {
+.team-member img.profile {
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -102,7 +102,6 @@ footer {
     height: 30px;
     margin-top: 1em;
     object-fit: cover;
-    clip-path: none;
     border: none; /* Remove border from LinkedIn icon */
     box-shadow: none; /* Remove shadow from LinkedIn icon */
 }
