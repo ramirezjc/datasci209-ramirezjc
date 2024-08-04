@@ -154,6 +154,7 @@ footer {
 
 #home .overlay p {
     font-size: 2em; /* Adjust this value to achieve the desired text size */
+    padding: 0 2em; /* Add horizontal padding to the text */
 }
 
 #contact {
