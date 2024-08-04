@@ -119,6 +119,7 @@ footer {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    padding-top: 60px; /* Add padding to the top to avoid header overlap */
 }
 
 #homeVideo {
@@ -174,7 +175,7 @@ footer {
     flex-direction: column;
 }
 
-contact-container input,
+.contact-container input,
 .contact-container textarea {
     margin-bottom: 1em;
     padding: 1em;
