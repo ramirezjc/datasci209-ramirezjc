@@ -4,21 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateActiveLink() {
         let current = '';
-        
-        console.log('--- Scroll Event ---');
+
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
+            const sectionTop = section.offsetTop - 80; // Adjust this value based on your fixed header height
             const sectionHeight = section.clientHeight;
             const sectionBottom = sectionTop + sectionHeight;
-            const scrollPosition = window.pageYOffset + window.innerHeight / 2;  // Consider middle of the viewport for better accuracy
-            console.log(`Section: ${section.id}, Top: ${sectionTop}, Bottom: ${sectionBottom}, Scroll Position: ${scrollPosition}`);
-            
+            const scrollPosition = window.pageYOffset + 1; // Consider a small offset for better accuracy
+
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                 current = section.getAttribute('id');
             }
         });
-
-        console.log(`Current Active Section: ${current}`);
 
         navLinks.forEach(link => {
             link.classList.remove('active');
