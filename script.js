@@ -1,27 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
     function setActiveMenu() {
-        var scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
         var links = document.querySelectorAll('nav ul li a');
-        var lastLink = links[links.length - 1];
-        var contactSection = document.querySelector(lastLink.getAttribute('href'));
-        
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-            links.forEach(function (link) {
-                link.classList.remove('active');
-            });
-            lastLink.classList.add('active');
-            return;
-        }
+        var contactLink = document.querySelector('nav ul li a[href="#contact"]');
 
+        // Remove the active class from all links
         links.forEach(function (link) {
-            var section = document.querySelector(link.getAttribute('href'));
-            if (section.offsetTop <= scrollPos && (section.offsetTop + section.offsetHeight) > scrollPos) {
-                links.forEach(function (link) {
-                    link.classList.remove('active');
-                });
-                link.classList.add('active');
-            }
+            link.classList.remove('active');
         });
+
+        // Add the active class only to the contact link
+        contactLink.classList.add('active');
     }
 
     window.addEventListener('scroll', setActiveMenu);
