@@ -1,14 +1,14 @@
-$(document).ready(function() {
-    $(window).on('scroll', function() {
-        var scrollPos = $(document).scrollTop();
-        $('nav ul li a').each(function() {
-            var currLink = $(this);
-            var refElement = $(currLink.attr('href'));
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                $('nav ul li a').removeClass('active');
-                currLink.addClass('active');
-            } else {
-                currLink.removeClass('active');
+document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('scroll', function () {
+        var scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+        var links = document.querySelectorAll('nav ul li a');
+        links.forEach(function (link) {
+            var section = document.querySelector(link.getAttribute('href'));
+            if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+                links.forEach(function (link) {
+                    link.classList.remove('active');
+                });
+                link.classList.add('active');
             }
         });
     });
