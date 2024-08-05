@@ -21,13 +21,13 @@
     </header>
     <section id="home">
         <div class="video-container">
-            <video id="homeVideo" width="640" height="480" autoplay muted loop>
-                <source src="https://drive.google.com/uc?export=download&id=1Kllz3rpJSwkT5C3v8280yWbcxUIIgUar" type="video/mp4">
+            <video autoplay muted loop id="homeVideo">
+                <source src="city.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
         </div>
         <div class="overlay">
-            <p>Welcome to the Urbanization & Housing Market Trends website. Explore our interactive visualization to learn more about the trends impacting urban development and housing markets.</p>
+            <p>Welcome to the Urbanization & Housing Market Trends website. Explore our analysis, recommendations, and team to learn more about the trends impacting urban development and housing markets.</p>
         </div>
     </section>
     <section id="about">
@@ -35,7 +35,7 @@
         <div>
             <h3>Background:</h3>
             <ul>
-                <li>Urbanization and housing market trends have a profound impact on the economic, social, and environmental landscapes of regions.</li>
+                <li>Urbanization and housing market trends have a profound impact on the economic, social, and environmental landscapes of regions. </li>
                 <li>Understanding these trends is essential for urban planners, policymakers, real estate developers, economists, and the general public. Trends include:
                     <ul>
                         <li>Historical Housing Prices</li>
@@ -164,13 +164,5 @@
         <p>&copy; 2024 Urbanization & Housing Market Trends</p>
     </footer>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var video = document.getElementById('homeVideo');
-            video.muted = true;
-            video.play();
-        });
-    </script>
 </body>
 </html>
-
