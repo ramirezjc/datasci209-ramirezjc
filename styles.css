@@ -45,23 +45,13 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Add these lines */
-a:link {
+a.about-link:link {
     color: blue;
 }
 
-a:visited {
+a.about-link:visited {
     color: blue;
 }
-
-/* Remove this block
-nav ul li a.active {
-    background-color: gold;
-    padding: 5px;
-    border-radius: 5px;
-    color: black;
-}
-*/
 
 section {
     padding: 2em;
@@ -224,7 +214,7 @@ footer {
     transition: background-color 0.3s;
 }
 
-contact-container button:hover {
+.contact-container button:hover {
     background-color: darkgoldenrod;
 }
 
